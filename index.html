@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Avalon — Earth Harmony Sound & Wellness</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e8e8e8; min-height: 100vh; }
+  header { background: #1a1a2e; border-bottom: 2px solid #d4a843; padding: 24px; text-align: center; }
+  header h1 { color: #f0c040; font-size: 28px; margin-bottom: 4px; }
+  header p { color: #888; font-size: 14px; }
+  main { max-width: 700px; margin: 0 auto; padding: 20px 16px; }
+  .track { background: #1a1a1a; border: 1px solid #333; border-radius: 10px; padding: 16px; margin-bottom: 12px; display: flex; gap: 14px; align-items: flex-start; }
+  .track-thumb { width: 60px; height: 60px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .track-thumb svg { width: 54px; height: 54px; }
+  .track-body { flex: 1; }
+  .track-title { font-size: 17px; font-weight: 600; color: #e8e8e8; margin-bottom: 4px; }
+  .track-meta { font-size: 12px; color: #666; margin-bottom: 8px; }
+  .track-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+  .tag { background: #2a2a2a; border: 1px solid #444; border-radius: 10px; padding: 2px 8px; font-size: 11px; color: #aaa; }
+  .player { display: flex; align-items: center; gap: 10px; }
+  .play-btn { background: #1a1a1a; border: 2px solid #d4a843; color: #d4a843; border-radius: 20px; padding: 6px 16px; font-size: 13px; cursor: pointer; white-space: nowrap; transition: all 0.15s; }
+  .play-btn:hover, .play-btn.playing { background: #d4a843; color: #111; }
+  .progress-bar { flex: 1; height: 5px; background: #333; border-radius: 3px; overflow: hidden; }
+  .fill { height: 100%; background: #d4a843; border-radius: 3px; width: 0%; transition: width 0.1s; }
+  .time { font-size: 12px; color: #666; min-width: 36px; text-align: right; }
+  .download-btn { display: inline-block; margin-top: 8px; background: none; border: 1px solid #555; color: #999; border-radius: 6px; padding: 4px 12px; font-size: 11px; cursor: pointer; text-decoration: none; transition: all 0.15s; }
+  .download-btn:hover { border-color: #d4a843; color: #d4a843; }
+  footer { text-align: center; padding: 40px 20px; color: #555; font-size: 13px; }
+  footer a { color: #d4a843; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎵 For Avalon</h1>
+  <p>Earth Harmony Sound & Wellness · Marcus Fung · 8 tracks</p>
+</header>
+<main>
+<div style="text-align:center;margin-bottom:20px;">
+  <button id="playAllBtn" onclick="playAll()" style="background:#d4a843;color:#111;border:none;border-radius:20px;padding:10px 28px;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.15s;">▶ Play All</button>
+</div>
+
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.6"/><circle cx="50" cy="50" r="28" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.4"/><circle cx="50" cy="50" r="16" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3"/><circle cx="50" cy="50" r="4" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Visions for a New Earth</div>
+      <div class="track-meta">Visions for a New Earth · 9:49 · 23.6 MB</div>
+      <div class="track-tags"><span class="tag">spacious</span><span class="tag">warm</span><span class="tag">uplifting</span><span class="tag">peaceful</span><span class="tag">airy</span><span class="tag">piano</span><span class="tag">slow</span><span class="tag">crystal-singing-bowls</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('d04e7ee7451a', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-d04e7ee7451a"></div></div>
+        <span class="time" id="tm-d04e7ee7451a">0:00</span>
+      </div>
+      <audio id="a-d04e7ee7451a" src="music/01 - Visions for a New Earth.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/01 - Visions for a New Earth.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.6"/><polygon points="50,30 75,75 25,75" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.4"/><circle cx="50" cy="60" r="4" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">A Mother&#x27;s Love</div>
+      <div class="track-meta">Ultimate Sleep Serenity · 11:13 · 27.0 MB</div>
+      <div class="track-tags"><span class="tag">piano</span><span class="tag">slow</span><span class="tag">meditation</span><span class="tag">yoga</span><span class="tag">sleep</span><span class="tag">peaceful</span><span class="tag">warm</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('995d3e345f3d', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-995d3e345f3d"></div></div>
+        <span class="time" id="tm-995d3e345f3d">0:00</span>
+      </div>
+      <audio id="a-995d3e345f3d" src="music/02 - A Mothers Love.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/02 - A Mothers Love.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3"/><line x1="50" y1="10" x2="50" y2="90" stroke="#d4a843" stroke-width="0.8" opacity="0.3"/><line x1="10" y1="50" x2="90" y2="50" stroke="#d4a843" stroke-width="0.8" opacity="0.3"/><circle cx="50" cy="50" r="20" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/><circle cx="50" cy="50" r="3" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Atmospheric Bliss</div>
+      <div class="track-meta">Source Code Frequencies Vol. 5 · 9:24 · 22.6 MB</div>
+      <div class="track-tags"><span class="tag">uplifting</span><span class="tag">warm</span><span class="tag">peaceful</span><span class="tag">airy</span><span class="tag">meditation</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('23dbfa4fc787', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-23dbfa4fc787"></div></div>
+        <span class="time" id="tm-23dbfa4fc787">0:00</span>
+      </div>
+      <audio id="a-23dbfa4fc787" src="music/03 - Atmospheric Bliss.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/03 - Atmospheric Bliss.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><polygon points="50,5 61,40 98,40 68,62 79,97 50,75 21,97 32,62 2,40 39,40" fill="none" stroke="#d4a843" stroke-width="1.2" opacity="0.5"/><circle cx="50" cy="50" r="4" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Divine Timing</div>
+      <div class="track-meta">Divine · 7:53 · 19.0 MB</div>
+      <div class="track-tags"><span class="tag">piano</span><span class="tag">peaceful</span><span class="tag">slow</span><span class="tag">spacious</span><span class="tag">strings</span><span class="tag">mallets</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('e0bea0b37123', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-e0bea0b37123"></div></div>
+        <span class="time" id="tm-e0bea0b37123">0:00</span>
+      </div>
+      <audio id="a-e0bea0b37123" src="music/04 - Divine Timing.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/04 - Divine Timing.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><path d="M50,10 Q80,30 80,50 Q80,70 50,90 Q20,70 20,50 Q20,30 50,10Z" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/><path d="M50,25 Q65,38 65,50 Q65,62 50,75 Q35,62 35,50 Q35,38 50,25Z" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3"/><circle cx="50" cy="50" r="3" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Healing &amp; Deep Rest — Refuge for the Soul</div>
+      <div class="track-meta">2 Hz Delta Waves · Binaural Beats · 10:24 · 25.0 MB</div>
+      <div class="track-tags"><span class="tag">drone</span><span class="tag">voice</span><span class="tag">recording-bed</span><span class="tag">peaceful</span><span class="tag">yoga</span><span class="tag">meditation</span><span class="tag">uplifting</span><span class="tag">sleep</span><span class="tag">warm</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('8792dde2fe7e', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-8792dde2fe7e"></div></div>
+        <span class="time" id="tm-8792dde2fe7e">0:00</span>
+      </div>
+      <audio id="a-8792dde2fe7e" src="music/05 - Healing &amp; Deep Rest - Refuge for the Soul.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/05 - Healing &amp; Deep Rest - Refuge for the Soul.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><path d="M10,50 Q30,20 50,50 Q70,80 90,50" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/><path d="M10,50 Q30,35 50,50 Q70,65 90,50" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3"/><circle cx="50" cy="50" r="3" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Journey to Source (Extended)</div>
+      <div class="track-meta">Ultimate Sleep Serenity 2 · 71:05 · 85.3 MB</div>
+      <div class="track-tags"><span class="tag">peaceful</span><span class="tag">nature</span><span class="tag">recording-bed</span><span class="tag">meditation</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('980409b762ae', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-980409b762ae"></div></div>
+        <span class="time" id="tm-980409b762ae">0:00</span>
+      </div>
+      <audio id="a-980409b762ae" src="music/06 - Journey to Source (Extended).mp3" preload="none"></audio>
+      <a class="download-btn" href="music/06 - Journey to Source (Extended).mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><rect x="20" y="20" width="60" height="60" rx="4" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/><rect x="30" y="30" width="40" height="40" rx="3" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3" transform="rotate(45 50 50)"/><circle cx="50" cy="50" r="3" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Stillness — Windchimes + AUM</div>
+      <div class="track-meta">Classic Therapeutic Sounds · 17:20 · 41.6 MB</div>
+      <div class="track-tags"><span class="tag">peaceful</span><span class="tag">meditation</span><span class="tag">yoga</span><span class="tag">sleep</span><span class="tag">spacious</span><span class="tag">warm</span><span class="tag">chimes</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('50fed5a75282', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-50fed5a75282"></div></div>
+        <span class="time" id="tm-50fed5a75282">0:00</span>
+      </div>
+      <audio id="a-50fed5a75282" src="music/07 - Stillness - Windchimes + AUM.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/07 - Stillness - Windchimes + AUM.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+  <div class="track">
+    <div class="track-thumb">
+      <svg viewBox="0 0 100 100"><polygon points="50,10 93,25 93,75 50,90 7,75 7,25" fill="none" stroke="#d4a843" stroke-width="1.5" opacity="0.5"/><polygon points="50,25 75,35 75,65 50,75 25,65 25,35" fill="none" stroke="#d4a843" stroke-width="1" opacity="0.3"/><circle cx="50" cy="50" r="3" fill="#d4a843" opacity="0.8"/></svg>
+    </div>
+    <div class="track-body">
+      <div class="track-title">Vibrational Universe</div>
+      <div class="track-meta">Law of Attraction Vol. 4 · 432 Hz · 9:13 · 22.2 MB</div>
+      <div class="track-tags"><span class="tag">drone</span><span class="tag">peaceful</span><span class="tag">grounding</span><span class="tag">warm</span><span class="tag">yoga</span><span class="tag">meditation</span><span class="tag">sleep</span><span class="tag">piano</span></div>
+      <div class="player">
+        <button class="play-btn" onclick="togglePlay('20a77eaee1c2', this)">▶ Play</button>
+        <div class="progress-bar"><div class="fill" id="f-20a77eaee1c2"></div></div>
+        <span class="time" id="tm-20a77eaee1c2">0:00</span>
+      </div>
+      <audio id="a-20a77eaee1c2" src="music/08 - Vibrational Universe.mp3" preload="none"></audio>
+      <a class="download-btn" href="music/08 - Vibrational Universe.mp3" download>⬇ Download</a>
+    </div>
+  </div>
+
+</main>
+<footer>
+  Earth Harmony Sound & Wellness · Marcus Fung<br>
+  <a href="https://www.earthharmonysoundwellness.com">earthharmonysoundwellness.com</a>
+</footer>
+
+<script>
+let currentAudio = null, currentBtn = null, animFrame = null;
+const trackOrder = ['d04e7ee7451a','995d3e345f3d','23dbfa4fc787','e0bea0b37123','8792dde2fe7e','980409b762ae','50fed5a75282','20a77eaee1c2'];
+let playAllMode = false;
+let playAllIndex = 0;
+
+function playAll() {
+  const btn = document.getElementById('playAllBtn');
+  if (playAllMode) {
+    playAllMode = false;
+    btn.textContent = '▶ Play All';
+    if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; }
+    if (currentBtn) { currentBtn.textContent = '▶ Play'; currentBtn.classList.remove('playing'); }
+    return;
+  }
+  playAllMode = true;
+  playAllIndex = 0;
+  btn.textContent = '⏹ Stop All';
+  playNextInQueue();
+}
+
+function playNextInQueue() {
+  if (!playAllMode || playAllIndex >= trackOrder.length) {
+    playAllMode = false;
+    document.getElementById('playAllBtn').textContent = '▶ Play All';
+    return;
+  }
+  const id = trackOrder[playAllIndex];
+  const btn = document.querySelector(`[onclick*="${id}"]`);
+  if (btn) togglePlay(id, btn);
+  const audio = document.getElementById('a-' + id);
+  audio.onended = () => {
+    btn.textContent = '▶ Play';
+    btn.classList.remove('playing');
+    document.getElementById('f-' + id).style.width = '0%';
+    playAllIndex++;
+    playNextInQueue();
+  };
+}
+
+function togglePlay(id, btn) {
+  const audio = document.getElementById('a-' + id);
+  if (currentAudio && currentAudio !== audio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    if (currentBtn) { currentBtn.textContent = '▶ Play'; currentBtn.classList.remove('playing'); }
+    cancelAnimationFrame(animFrame);
+  }
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = '⏸ Pause';
+    btn.classList.add('playing');
+    currentAudio = audio;
+    currentBtn = btn;
+    function update() {
+      if (!audio.paused) {
+        const pct = (audio.currentTime / audio.duration * 100) || 0;
+        document.getElementById('f-' + id).style.width = pct + '%';
+        const m = Math.floor(audio.currentTime / 60);
+        const s = Math.floor(audio.currentTime % 60);
+        document.getElementById('tm-' + id).textContent = m + ':' + String(s).padStart(2, '0');
+        animFrame = requestAnimationFrame(update);
+      }
+    }
+    update();
+    audio.onended = () => { btn.textContent = '▶ Play'; btn.classList.remove('playing'); document.getElementById('f-' + id).style.width = '0%'; };
+  } else {
+    audio.pause();
+    btn.textContent = '▶ Play';
+    btn.classList.remove('playing');
+  }
+}
+</script>
+</body>
+</html>
